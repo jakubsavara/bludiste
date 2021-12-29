@@ -4,10 +4,15 @@ import { Screen } from '../utils/utils'
 export default function Home() {
   const screen = new Screen();
 
-  screen.writeAt(10, 10, 'A');
-  screen.writeAt(10, 11, 'h');
-  screen.writeAt(10, 12, 'o');
-  screen.writeAt(10, 13, 'j');
+  for (let s = 0; s < 80; s = s + 1) {
+    screen.writeAt(0, s, '+');
+    screen.writeAt(24, s, '+');
+  }
+
+  for (let r = 0; r < 25; r = r + 1) {
+    screen.writeAt(r, 0, '+');
+    screen.writeAt(r, 79, '+');
+  }
 
   return (
     <div className={styles.container}>

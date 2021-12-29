@@ -33,7 +33,10 @@ export class Screen {
                     line += char;
                 }
             }
+            let rr=''+r;
+            if(r<10)rr='0'+r;
             lines.push(<span className='consolerow'>{line}</span>)
+            
         }
         return lines;
     }
